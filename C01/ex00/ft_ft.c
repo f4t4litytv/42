@@ -6,7 +6,7 @@
 /*   By: f4t4lity <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/07 15:55:48 by f4t4lity          #+#    #+#             */
-/*   Updated: 2025/03/09 00:56:17 by f4t4lity         ###   ########.fr       */
+/*   Updated: 2025/03/09 15:41:21 by jpinto-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -16,7 +16,7 @@ void	ft_ft(int *nbr)
 {
 	*nbr = 42;
 }
-/*
+
 int	main(void)
 {
 	int n = 1;
@@ -34,4 +34,4 @@ int	main(void)
        	%p, but now that has the value %d stored\n", nbr, *nbr);
 	printf("Now 'n' has the value %d stored\n", n);
 }
-*/
+
