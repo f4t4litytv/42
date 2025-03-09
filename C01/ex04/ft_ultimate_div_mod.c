@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   testenelson.c                                      :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: f4t4lity <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/06 16:55:28 by f4t4lity          #+#    #+#             */
-/*   Updated: 2025/03/06 17:00:26 by f4t4lity         ###   ########.fr       */
+/*   Created: 2025/03/09 00:59:51 by f4t4lity          #+#    #+#             */
+/*   Updated: 2025/03/09 01:15:37 by f4t4lity         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <unistd.h>
-void ft_count()
+
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-	char count = 0;
-	while (count <= 999)
-	{
-		count++;
-		write(1, &count,3);
-	}
-}
-int main (void)
-{
-	ft_count();
-	return(0);
+	int	c;
+	int	d;
+
+	*a = c / d;
+	*b = c % d;
 }
