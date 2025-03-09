@@ -1,1 +1,1 @@
-finalmente a dar os meus primeiros passos em programação :DD
+finalmente a dar os meus primeiros passos em programação :D
