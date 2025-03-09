@@ -6,7 +6,7 @@
 /*   By: f4t4lity <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 00:59:51 by f4t4lity          #+#    #+#             */
-/*   Updated: 2025/03/09 16:56:42 by jpinto-r         ###   ########.fr       */
+/*   Updated: 2025/03/09 17:11:55 by jpinto-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -20,7 +20,7 @@ void	ft_ultimate_div_mod(int *a, int *b)
 	*a = c / d;
 	*b = c % d;
 }
-
+/*
 int main(void)
 {
 	int a, b;
@@ -28,3 +28,4 @@ int main(void)
 	ft_ultimate_div_mod(&a, &b);
 	printf("divisao = %d\nresto = %d \n", a, b);
 }
+*/
