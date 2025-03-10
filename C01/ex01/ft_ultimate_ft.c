@@ -6,7 +6,7 @@
 /*   By: jpinto-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 18:01:59 by jpinto-r          #+#    #+#             */
-/*   Updated: 2025/03/10 18:13:52 by jpinto-r         ###   ########.fr       */
+/*   Updated: 2025/03/10 18:44:19 by jpinto-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_ultimate_ft(int *********nbr)
 {
 	*********nbr = 42 ;
 }
-
+/*
 int main()
 {
 	int num = 0;
@@ -40,14 +40,15 @@ int main()
 	// declaramos a o apontador ptr8 para a var anterior
 	int *********ptr9 = &ptr8;	
 	// declaramos a o apontador ptr9 para a var anterior
+	
+	ft_ultimate_ft(ptr9);
+	
+		//agora chamamos a funcao com o parametro do ultimo 
+	//pointer para conseguirmos 
+	//printar 42 com o pointer *********nbr
 
-    ft_ultimate_ft(ptr9);
-	/*
-	   agora chamamos a funcao com o parametro do ultimo 
-	   pointer para conseguirmos 
-	   printar 42 com o pointer *********nbr
-	*/
     printf("O valor de num é: %d\n", num);
 
     return 0;
 }
+*/
