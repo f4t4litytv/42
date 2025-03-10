@@ -6,7 +6,7 @@
 /*   By: jpinto-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 18:33:02 by jpinto-r          #+#    #+#             */
-/*   Updated: 2025/03/10 19:48:18 by jpinto-r         ###   ########.fr       */
+/*   Updated: 2025/03/10 19:55:00 by jpinto-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 void	ft_ultimate_div_mod(int *a, int *b)
 {
-	int div;
-	int mod;
+	int	div;
+	int	mod;
 
 	div = *a / *b;
 	mod = *a % *b;
@@ -36,4 +36,3 @@ int main(void)
 
 	return 0;
 }*/
-
