@@ -6,7 +6,7 @@
 /*   By: f4t4lity <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/08 00:50:10 by f4t4lity          #+#    #+#             */
-/*   Updated: 2025/03/09 16:30:42 by jpinto-r         ###   ########.fr       */
+/*   Updated: 2025/03/10 18:23:01 by jpinto-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_div_mod(int a, int b, int *div, int *mod)
 	*mod = a % b;
 }
 
-
+/*
 int main()
 {
 	int a, b;
@@ -30,7 +30,8 @@ int main()
 	b = 5;
 
 	ft_div_mod(a, b, &resultado_div, &resultado_mod);
-	printf("o resultado da divisao e: %d \n o resultado do resto e: %d \n", resultado_div, resultado_mod);
+	printf("o res divisao e: %d \n o res resto 
+	e: %d \n", resultado_div, resultado_mod);
 
 	return 0;
-}
+}*/
