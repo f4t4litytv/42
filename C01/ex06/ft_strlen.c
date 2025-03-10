@@ -3,21 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: f4t4lity <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jpinto-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/10 14:46:56 by f4t4lity          #+#    #+#             */
-/*   Updated: 2025/03/10 15:04:40 by f4t4lity         ###   ########.fr       */
+/*   Created: 2025/03/10 19:05:05 by jpinto-r          #+#    #+#             */
+/*   Updated: 2025/03/10 19:21:52 by jpinto-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <string.h>
-#include <stdio.h>
 
-int main(void)
+void	ft_strlen(char *str)
 {
-	char	word[] = "Olá Mundo!";
-	int	nchars = strlen(word);
-	write(1, nchars, strlen(nchars));
+	int	count;
+
+	count = 0; 
+	while(*str)
+	{
+		write(1, str, 1);
+		str++;
+		count++;
+	}
+}
+
+int	main(void)
+{
+	int	len = ft_strlen("mundo");
+	write(1, "\n", 1);
 	return 0;
 }
