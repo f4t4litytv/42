@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jpinto-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/11 17:25:56 by jpinto-r          #+#    #+#             */
-/*   Updated: 2025/03/11 17:43:59 by jpinto-r         ###   ########.fr       */
+/*   Created: 2025/03/11 17:46:43 by jpinto-r          #+#    #+#             */
+/*   Updated: 2025/03/11 18:26:27 by jpinto-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-int	ft_str_is_alpha(char *str)
+int	ft_str_is_numeric(char *str)
 {
-	if (*str == '\0')
+	if (str[0] == '\0')
 	{
 		return 1;
 	}
 	
-	while(*str)
+	int i = 0;
+	while(str[i] != '\0')
 	{
-		if (!((*str >= 'a' && *str <= 'z') || (*str >= 'A' && *str <= 'Z')))
+		if (str[i] < '0' || str[i] > '9')
 		{
 			return 0;
 		}
-		str++;
+		i++;
 	}
 	return 1;
 }
+
