@@ -6,7 +6,7 @@
 /*   By: f4t4lity <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 13:38:18 by f4t4lity          #+#    #+#             */
-/*   Updated: 2025/03/08 19:33:22 by f4t4lity         ###   ########.fr       */
+/*   Updated: 2025/03/10 22:41:04 by f4t4lity         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,12 @@ void	ft_putchar(char c)
 {
 	write (1, &c, 1);
 }
-
-/*int main(void)
+/*
+int main(void)
 {
 	ft_putchar('4');
 	ft_putchar('\n');
+	ft_putchar('Hello');
 	return (0);
-}*/
+}
+*/
