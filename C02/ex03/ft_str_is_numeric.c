@@ -6,7 +6,7 @@
 /*   By: jpinto-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 17:46:43 by jpinto-r          #+#    #+#             */
-/*   Updated: 2025/03/12 01:19:50 by jpinto-r         ###   ########.fr       */
+/*   Updated: 2025/03/12 01:39:46 by f4t4lity         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_str_is_numeric(char *str)
 	}
 	return (1);
 }
-
+/*
 int	main()
 {
 	char	str1[] = "Olá mundo";
@@ -48,4 +48,4 @@ int	main()
 	printf("str5 (\"%s\") é numérico : %d\n", str5, ft_str_is_numeric(str5));
 	return 0;
 }
-
+*/
