@@ -6,7 +6,7 @@
 /*   By: jpinto-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 17:46:43 by jpinto-r          #+#    #+#             */
-/*   Updated: 2025/03/12 00:43:22 by f4t4lity         ###   ########.fr       */
+/*   Updated: 2025/03/12 01:19:50 by jpinto-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,12 @@
 
 int	ft_str_is_numeric(char *str)
 {
+	int	i;
+
 	if (str[0] == '\0')
 	{
 		return (1);
 	}
-	int	i;
 	i = 0;
 	while (str[i] != '\0')
 	{
@@ -31,7 +32,7 @@ int	ft_str_is_numeric(char *str)
 	}
 	return (1);
 }
-/*
+
 int	main()
 {
 	char	str1[] = "Olá mundo";
@@ -40,11 +41,11 @@ int	main()
 	char	str4[] = "";
 	char	str5[] = "!#$%%&/(()";  ;
 
-	printf("str1 (\"%s\") é alpha : %d\n", str1, ft_str_is_numeric(str1));
-	printf("str2 (\"%s\") é alpha : %d\n", str2, ft_str_is_numeric(str2));
-	printf("str3 (\"%s\") é alpha : %d\n", str3, ft_str_is_numeric(str3));
-	printf("str4 (\"%s\") é alpha : %d\n", str4, ft_str_is_numeric(str4));
-	printf("str5 (\"%s\") é alpha : %d\n", str5, ft_str_is_numeric(str5));
+	printf("str1 (\"%s\") é numérico : %d\n", str1, ft_str_is_numeric(str1));
+	printf("str2 (\"%s\") é numérico : %d\n", str2, ft_str_is_numeric(str2));
+	printf("str3 (\"%s\") é numérico : %d\n", str3, ft_str_is_numeric(str3));
+	printf("str4 (\"%s\") é numérico : %d\n", str4, ft_str_is_numeric(str4));
+	printf("str5 (\"%s\") é numérico : %d\n", str5, ft_str_is_numeric(str5));
 	return 0;
 }
-*/
+
