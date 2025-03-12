@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncy.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jpinto-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 16:13:48 by jpinto-r          #+#    #+#             */
-/*   Updated: 2025/03/11 16:28:34 by jpinto-r         ###   ########.fr       */
+/*   Updated: 2025/03/11 23:36:56 by f4t4lity         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,28 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	}
 	return (dest);
 }
+/*
+int	main()
+{
+	char	origem[] = "Hello World!";
+	char	destino[20];
+	unsigned int	n =5;
+
+	ft_strncpy(destino, origem, n);
+	printf("origem: \"%s\", n=%u, Copiado: \"%s\"\n", origem, n, destino);
+	
+	n = 15;
+	ft_strncpy(destino, origem, n);
+	printf("origem: \"%s\", n=%u, Copiado: \"%s\"\n", origem, n, destino);
+
+	n = 0;
+	ft_strncpy(destino, origem, n);
+	printf("origem: \"%s\", n=%u, Copiado: \"%s\"\n", origem, n, destino);
+
+	char	origem_vazia[] = "";
+	n = 10;
+	ft_strncpy(destino, origem_vazia, n);
+	printf("origem: \"%s\", n=%u, Copiado: \"%s\"\n", origem_vazia, n, destino);
+
+	return 0;
+}*/
