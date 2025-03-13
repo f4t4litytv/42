@@ -6,7 +6,7 @@
 /*   By: jpinto-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 18:32:54 by jpinto-r          #+#    #+#             */
-/*   Updated: 2025/03/12 17:17:10 by vboxuser         ###   ########.fr       */
+/*   Updated: 2025/03/12 19:18:51 by f4t4lity         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,22 @@
 
 int	ft_str_is_uppercase(char *str)
 {
+	int	i;
+
 	if (str[0] == '\0')
 	{
-		return 1;
+		return (1);
 	}
-	
-	int i = 0;
-	while(str[i] != '\0')
+	i = 0;
+	while (str[i] != '\0')
 	{
 		if ((str[i] < 'A' || str[i] > 'Z') && str[i] != ' ')
 		{
-			return 0;
+			return (0);
 		}
 		i++;
 	}
-	return 1;
+	return (1);
 }
 /*
 int     main()
