@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: f4t4lity <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/12 20:44:39 by f4t4lity          #+#    #+#             */
-/*   Updated: 2025/03/13 14:27:04 by f4t4lity         ###   ########.fr       */
+/*   Created: 2025/03/13 15:19:42 by f4t4lity          #+#    #+#             */
+/*   Updated: 2025/03/13 15:22:03 by f4t4lity         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*ft_strcapitalize(char *str)
 	}
 	return (str);
 }
-/*
+
 int	main()
 {
 	char	str1[] = "ola, tudo bem?"; 
@@ -57,16 +57,12 @@ int	main()
 	char	*copia4 = strdup(str4);
 	char	*copia5 = strdup(str5);
 
-    printf("Original: '%s', Capitalizada:
-    '%s'\n", str1, ft_strcapitalize(copia1));
-    printf("Original: '%s', Capitalizada:
-    '%s'\n", str2, ft_strcapitalize(copia2));
-    printf("Original: '%s', Capitalizada:
-    '%s'\n", str3, ft_strcapitalize(copia3));
-    printf("Original: '%s', Capitalizada: 
-    '%s'\n", str4, ft_strcapitalize(copia4));
-    printf("Original: '%s', Capitalizada:
-    '%s'\n", str5, ft_strcapitalize(copia5));
+
+    printf("Original: '%s', Capitalizada:'%s'\n", str1, ft_strcapitalize(copia1));
+    printf("Original: '%s', Capitalizada:'%s'\n", str2, ft_strcapitalize(copia2));
+    printf("Original: '%s', Capitalizada:'%s'\n", str3, ft_strcapitalize(copia3));
+    printf("Original: '%s', Capitalizada:'%s'\n", str4, ft_strcapitalize(copia4));
+    printf("Original: '%s', Capitalizada:'%s'\n", str5, ft_strcapitalize(copia5));
 
     free(copia1);
     free(copia2);
@@ -75,4 +71,4 @@ int	main()
     free(copia5);
 
     return 0;
-}*/
+}
