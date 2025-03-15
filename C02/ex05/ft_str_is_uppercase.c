@@ -6,7 +6,7 @@
 /*   By: jpinto-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 18:32:54 by jpinto-r          #+#    #+#             */
-/*   Updated: 2025/03/12 19:18:51 by f4t4lity         ###   ########.fr       */
+/*   Updated: 2025/03/14 23:20:00 by f4t4lity         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_str_is_uppercase(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if ((str[i] < 'A' || str[i] > 'Z') && str[i] != ' ')
+		if (str[i] < 'A' || str[i] > 'Z')
 		{
 			return (0);
 		}
@@ -36,7 +36,7 @@ int	ft_str_is_uppercase(char *str)
 int     main()
 {
          char    str1[] = "Olá mundo";
-         char    str2[] = "MUNDO OLA";
+         char    str2[] = "MUNDOOLA";
          char    str3[] = "134567890";
          char    str4[] = "";
          char    str5[] = "!#$%%&/(()";

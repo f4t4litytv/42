@@ -6,7 +6,7 @@
 /*   By: f4t4lity <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 00:06:02 by f4t4lity          #+#    #+#             */
-/*   Updated: 2025/03/12 19:47:58 by f4t4lity         ###   ########.fr       */
+/*   Updated: 2025/03/14 23:38:17 by f4t4lity         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,10 @@ char	*ft_strupcase(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		str[i] = toupper(str[i]);
+		if(str[i] >= 'a' && str[i] <= 'z')
+		{
+			str[i] = str[i] - 32;
+		}
 		i++;
 	}
 	return (str);

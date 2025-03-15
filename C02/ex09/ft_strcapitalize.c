@@ -6,7 +6,7 @@
 /*   By: jpinto-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 17:11:19 by jpinto-r          #+#    #+#             */
-/*   Updated: 2025/03/13 18:30:35 by jpinto-r         ###   ########.fr       */
+/*   Updated: 2025/03/15 00:01:14 by f4t4lity         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,27 +17,27 @@
 void	processar_caracteres(char *str)
 {
 	int	i;
-	int	primeira_palavra;
+	int	primeira_letra;
 
 	i = 0;
-	primeira_palavra = 1;
+	primeira_letra = 1;
 	while (str[i] != '\0')
 	{
-		if (isalnum(str[i]))
+		if (str[i] >= 'a' && str[i] <= 'z')
 		{
-			if (primeira_palavra)
+			if (primeira_letra)
 			{
-				str[i] = toupper(str[i]);
-				primeira_palavra = 0;
+				str[i] = str[i] - 32;
+				primeira_letra = 0;
 			}
 			else
 			{
-				str[i] = tolower(str[i]);
+				str[i] = str[i] + 32;
 			}
 		}
 		else
 		{
-			primeira_palavra = 1;
+			primeira_letra = 1;
 		}
 		i++;
 	}
