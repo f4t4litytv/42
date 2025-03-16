@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: jpinto-r <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/13 17:11:19 by jpinto-r          #+#    #+#             */
-/*   Updated: 2025/03/15 00:01:14 by f4t4lity         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <stdio.h>
 #include <ctype.h>
 #include <stdlib.h>
@@ -17,27 +5,26 @@
 void	processar_caracteres(char *str)
 {
 	int	i;
-	int	primeira_letra;
+	int	nova_palavra;
 
 	i = 0;
-	primeira_letra = 1;
+	nova_palavra = 1;
 	while (str[i] != '\0')
 	{
-		if (str[i] >= 'a' && str[i] <= 'z')
+		if (nova_palavra)
 		{
-			if (primeira_letra)
+			if (str[i] >= 'a' && str[i] <= 'z')
 			{
 				str[i] = str[i] - 32;
-				primeira_letra = 0;
+				nova_palavra = 0;
 			}
-			else
+			else if (str[i] >= 'A' && str[i] <= 'Z')
 			{
-				str[i] = str[i] + 32;
+				nova_palavra = 0;
 			}
-		}
-		else
-		{
-			primeira_letra = 1;
+			else if (str[i] == ' '){
+				nova_palavra = 1;
+			}
 		}
 		i++;
 	}
@@ -53,7 +40,7 @@ char	*ft_strcapitalize(char *str)
 int main()
 {
     char str1[] = "ola, tudo bem?";
-    char str2[] = "PRIMEIRA PALAVRA";
+    char str2[] = "ola, tudo bem? 42palavras quarenta-e-duas; cinquenta+e+um";
     char str3[] = "outra string";
     char str4[] = "123palavras";
     char str5[] = "";
