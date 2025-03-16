@@ -1,6 +1,5 @@
 #include <stdio.h>
-#include <ctype.h>
-#include <stdlib.h>
+#include <string.h>
 
 void	processar_caracteres(char *str)
 {
@@ -17,14 +16,16 @@ void	processar_caracteres(char *str)
 			{
 				str[i] = str[i] - 32;
 				nova_palavra = 0;
-			}
+			} 
 			else if (str[i] >= 'A' && str[i] <= 'Z')
 			{
 				nova_palavra = 0;
 			}
-			else if (str[i] == ' '){
-				nova_palavra = 1;
-			}
+		} 
+		else if (str[i] == ' ' || str[i] == ',' || str[i] == '?'
+				|| str[i] == ';' || str[i] == '+' || str[i] == '-')
+		{
+			nova_palavra = 1;
 		}
 		i++;
 	}
@@ -36,7 +37,7 @@ char	*ft_strcapitalize(char *str)
 	return (str);
 }
 
-
+/*
 int main()
 {
     char str1[] = "ola, tudo bem?";
@@ -52,4 +53,4 @@ int main()
     printf("Original: '%s', Capitalizada:'%s'\n", str5, ft_strcapitalize(str5));
 
     return 0;
-}
+}*/
