@@ -1,56 +1,51 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jpinto-r <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/16 18:20:30 by jpinto-r          #+#    #+#             */
+/*   Updated: 2025/03/16 20:44:43 by jpinto-r         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
-#include <string.h>
 
-void	processar_caracteres(char *str)
+char *ft_strcapitalize(char *str)
 {
-	int	i;
-	int	nova_palavra;
+    int i = 0;
+    int nova_palavra = 1;  // Flag para verificar o início de uma nova palavra
 
-	i = 0;
-	nova_palavra = 1;
-	while (str[i] != '\0')
-	{
-		if (nova_palavra)
-		{
-			if (str[i] >= 'a' && str[i] <= 'z')
-			{
-				str[i] = str[i] - 32;
-				nova_palavra = 0;
-			} 
-			else if (str[i] >= 'A' && str[i] <= 'Z')
-			{
-				nova_palavra = 0;
-			}
-		} 
-		else if (str[i] == ' ' || str[i] == ',' || str[i] == '?'
-				|| str[i] == ';' || str[i] == '+' || str[i] == '-')
-		{
-			nova_palavra = 1;
-		}
-		i++;
-	}
+    while (str[i] != '\0')
+    {
+            if (str[0] >= 'a' && str[0] <= 'z')
+            {
+                str[0] -= 32;
+            }
+	    if ((str[i] >= 32 && str[i] <= 47) 
+			    || (str[i] >= 58 && str[i] <= 64)
+			    || (str[i] >= 91 && str[i] <= 96)
+			    || (str[i] >= 123 && str[i] <= 126))
+		    if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
+			    str[i + 1] = str[i + 1] - 32;
+	    i++;
+    }
+    return str;  // Retorna a string modificada
 }
-
-char	*ft_strcapitalize(char *str)
+int	main()
 {
-	processar_caracteres(str);
-	return (str);
+	char	str1[] = "Ola mundo";
+	char	str2[] = "asda sd21 3124dasd asd";
+	char	str3[] = " 2e sda sd2 131 24dasd -asd";
+	char	str4[] = "asd  as d2 1 3124d as d *asd";
+	char	str5[] = "asdas das d +asd";
+
+	printf("%s\n", ft_strcapitalize(str1));
+	printf("%s\n", ft_strcapitalize(str2));
+	printf("%s\n", ft_strcapitalize(str3));
+	printf("%s\n", ft_strcapitalize(str4));
+	printf("%s\n", ft_strcapitalize(str5));
+
+	return (0);
 }
-
-/*
-int main()
-{
-    char str1[] = "ola, tudo bem?";
-    char str2[] = "ola, tudo bem? 42palavras quarenta-e-duas; cinquenta+e+um";
-    char str3[] = "outra string";
-    char str4[] = "123palavras";
-    char str5[] = "";
-
-    printf("Original: '%s', Capitalizada:'%s'\n", str1, ft_strcapitalize(str1));
-    printf("Original: '%s', Capitalizada:'%s'\n", str2, ft_strcapitalize(str2));
-    printf("Original: '%s', Capitalizada:'%s'\n", str3, ft_strcapitalize(str3));
-    printf("Original: '%s', Capitalizada:'%s'\n", str4, ft_strcapitalize(str4));
-    printf("Original: '%s', Capitalizada:'%s'\n", str5, ft_strcapitalize(str5));
-
-    return 0;
-}*/
