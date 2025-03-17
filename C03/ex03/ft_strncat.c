@@ -4,23 +4,31 @@
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	unsigned int nb = 0;
+	unsigned int i = 0;
+	unsigned int j = 0;
 
-	while (i < nb && dest[i] != '\0' && src[i] != '\0')
+	while (dest[i] != '\0')
 	{
-		if (dest[i] != src[i])
-		{
-			return (0);
-		}
-		nb++;
+		i++;
 	}
 	
-	if (i == nb)
+	while (src[j] != '\0' && j < nb)
 	{
-		return (0);
+		dest[i] = src[j];
+		i++;
+		j++;
 	}
-	else
-	{
-		return (dest[i] - src[i]);
-	}
+
+	dest[i] = '\0';
+
+	return dest;
 }
+/*
+int	main()
+{
+	char	dest[20] = "Hello, ";
+	char	src[] = "World!";
+
+	printf("string concatenada : %s \n", ft_strncat(dest, src, 5));
+	return (0);
+}*/
