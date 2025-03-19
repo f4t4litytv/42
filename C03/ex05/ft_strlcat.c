@@ -6,30 +6,32 @@
 /*   By: jpinto-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 18:58:57 by jpinto-r          #+#    #+#             */
-/*   Updated: 2025/03/18 19:22:23 by jpinto-r         ###   ########.fr       */
+/*   Updated: 2025/03/19 17:52:11 by jpinto-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
+int	teste(char *str)
+{
+	int	j;
+
+	j = 0;
+	while (str[j] != '\0')
+		j++;
+	return (j);
+}
+
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
+	unsigned int	i;
 	unsigned int	dest_len;
 	unsigned int	src_len;
-	unsigned int	i;
 
-	dest_len = 0;
-	src_len = 0;
+	dest_len = teste(dest);
+	src_len = teste(src);
 	i = 0;
-	while (dest[dest_len] != '\0')
-	{
-		dest_len++;
-	}
-	while (src[src_len] != '\0')
-	{
-		src_len++;
-	}
 	if (size > dest_len)
 	{
 		while (src[i] != '\0' && dest_len + i < size - 1)
@@ -37,9 +39,8 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 			dest[dest_len + i] = src[i];
 			i++;
 		}
-	dest[dest_len + i] = '\0';
+		dest[dest_len + i] = '\0';
 	}
-	if (size < dest_len) dest[size - 1] = '\0';
 	return (dest_len + src_len);
 }
 /*

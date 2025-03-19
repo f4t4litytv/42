@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jpinto-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/19 17:52:54 by jpinto-r          #+#    #+#             */
-/*   Updated: 2025/03/19 17:55:03 by jpinto-r         ###   ########.fr       */
+/*   Created: 2025/03/18 18:28:48 by jpinto-r          #+#    #+#             */
+/*   Updated: 2025/03/18 18:30:53 by jpinto-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
-#include <unistd.h>
 
-char	*ft_strncat(char *dest, char *src, unsigned int nb)
+char	*ft_strcat(char *dest, char *src)
 {
-	unsigned int	i;
-	unsigned int	j;
+	int	i;
+	int	j;
 
 	i = 0;
 	j = 0;
@@ -25,7 +24,7 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 	{
 		i++;
 	}
-	while (src[j] != '\0' && j < nb)
+	while (src[j] != '\0')
 	{
 		dest[i] = src[j];
 		i++;
@@ -39,7 +38,6 @@ int	main()
 {
 	char	dest[20] = "Hello, ";
 	char	src[] = "World!";
-
-	printf("string concatenada : %s \n", ft_strncat(dest, src, 5));
+	printf("String concatenada %s\n", ft_strcat(dest, src));
 	return (0);
 }*/

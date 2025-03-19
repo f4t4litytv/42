@@ -1,45 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jpinto-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/19 17:52:54 by jpinto-r          #+#    #+#             */
-/*   Updated: 2025/03/19 17:55:03 by jpinto-r         ###   ########.fr       */
+/*   Created: 2025/03/18 18:25:47 by jpinto-r          #+#    #+#             */
+/*   Updated: 2025/03/18 18:28:22 by jpinto-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
-#include <unistd.h>
 
-char	*ft_strncat(char *dest, char *src, unsigned int nb)
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
 	unsigned int	i;
-	unsigned int	j;
 
 	i = 0;
-	j = 0;
-	while (dest[i] != '\0')
+	while (i < n && s1[i] != '\0' && s2[i] != '\0')
 	{
+		if (s1[i] != s2[i])
+		{
+			return (s1[i] - s2[i]);
+		}
 		i++;
 	}
-	while (src[j] != '\0' && j < nb)
+	if (i == n)
 	{
-		dest[i] = src[j];
-		i++;
-		j++;
+		return (0);
 	}
-	dest[i] = '\0';
-	return (dest);
+	else
+	{
+		return (s1[i] - s2[i]);
+	}
 }
 /*
 int	main()
 {
-	char	dest[20] = "Hello, ";
-	char	src[] = "World!";
+	char str1[] = "Hello";
+	char str1[] = "Hellz";
 
-	printf("string concatenada : %s \n", ft_strncat(dest, src, 5));
+	printf("compara os primeiros 4 caracteres %d\n", ft_strncmp(str1, str2, 4));
+	printf("compara os primeiros 5 caracteres %d\n", ft_strncmp(str1, str2, 5));
+
 	return (0);
-}*/
+}
+*/
